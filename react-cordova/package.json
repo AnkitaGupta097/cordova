@@ -1,0 +1,47 @@
+{
+  "name": "react-cordova",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cordova-android": "^8.1.0",
+    "cordova-browser": "^6.0.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "remove:www": "rm -rf www",
+    "build:cordova": "npm run remove:www && npm run build && mv build www"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cordova-plugin-whitelist": "1"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {}
+    },
+    "platforms": [
+      "android",
+      "browser"
+    ]
+  }
+}
